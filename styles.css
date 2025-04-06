@@ -1,0 +1,839 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #8B4513; /* Коричневый, как земля */
+    --secondary-color: #D2B48C; /* Песочный */
+    --accent-color: #CD853F; /* Перуанский коричневый */
+    --text-color: #333333;
+    --light-gray: #F5F5DC; /* Бежевый */
+    --white: #ffffff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+    --earth-gradient: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+    --sand-gradient: linear-gradient(135deg, #D2B48C 0%, #DEB887 100%);
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.8;
+    color: var(--text-color);
+    background-color: var(--light-gray);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка */
+header {
+    background: var(--earth-gradient);
+    padding: 20px 0;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    color: var(--white);
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.logo p {
+    font-size: 18px;
+    margin: 0;
+    color: var(--white);
+}
+
+.contact-info p {
+    text-align: right;
+    color: var(--white);
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.contact-info p:first-child {
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+/* Навигация */
+nav {
+    background: var(--earth-gradient);
+    padding: 15px 0;
+    box-shadow: var(--shadow);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+nav ul li a:hover {
+    background-color: var(--accent-color);
+}
+
+/* Герой секция */
+.hero {
+    position: relative;
+    padding: 100px 0;
+    text-align: center;
+    color: var(--white);
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/1.JPG');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+    animation: fadeInDown 1s ease-out;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+    color: var(--white);
+    animation: fadeInUp 1s ease-out 0.3s backwards;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--accent-color);
+    color: var(--white);
+    border: none;
+    padding: 15px 40px;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: var(--transition);
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: var(--shadow);
+    text-decoration: none;
+    animation: scaleIn 0.8s ease-out 0.6s backwards;
+}
+
+.cta-button:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.cta-button i {
+    font-size: 20px;
+}
+
+/* Секции */
+section {
+    scroll-margin-top: 120px; /* Учитываем высоту фиксированной шапки */
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+section:nth-child(even) {
+    background-color: var(--light-gray);
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+    font-size: 36px;
+    position: relative;
+    padding-bottom: 15px;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+section h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--earth-gradient);
+}
+
+/* Преимущества */
+.benefits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.benefit {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: var(--transition);
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.benefit:nth-child(1) { animation-delay: 0.1s; }
+.benefit:nth-child(2) { animation-delay: 0.2s; }
+.benefit:nth-child(3) { animation-delay: 0.3s; }
+.benefit:nth-child(4) { animation-delay: 0.4s; }
+
+.benefit:hover {
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+.benefit i {
+    font-size: 40px;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.benefit p {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+/* Таблица цен */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 20px;
+    text-align: center;
+}
+
+th {
+    background: var(--earth-gradient);
+    color: var(--white);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(210, 180, 140, 0.1);
+}
+
+tr:hover {
+    background-color: rgba(205, 133, 63, 0.1);
+}
+
+/* Форма обратной связи */
+.contact-form {
+    display: none;
+}
+
+.contact-details {
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.contact-details .phone-link {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.contact-details p {
+    font-size: 18px;
+    color: var(--text-color);
+    margin: 10px 0;
+}
+
+/* Футер */
+footer {
+    padding: 40px 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('images/3.JPG');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    text-align: center;
+}
+
+footer p {
+    font-size: 16px;
+    color: var(--white);
+}
+
+/* Анимации */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    nav ul li a {
+        display: block;
+        padding: 10px;
+    }
+    
+    .benefits {
+        flex-direction: column;
+    }
+    
+    .hero {
+        padding: 100px 0;
+    }
+    
+    .hero h2 {
+        font-size: 32px;
+    }
+    
+    .hero p {
+        font-size: 18px;
+    }
+    
+    section {
+        padding: 60px 0;
+    }
+    
+    section h2 {
+        font-size: 28px;
+    }
+    
+    .contact-form {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .contact-info {
+        margin-top: 15px;
+    }
+    
+    .hero h2 {
+        font-size: 28px;
+    }
+    
+    .hero p {
+        font-size: 16px;
+    }
+    
+    table {
+        font-size: 14px;
+    }
+    
+    th, td {
+        padding: 10px;
+    }
+}
+
+/* Секции с услугами */
+.services {
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-out;
+}
+
+.services.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.services:nth-child(even) {
+    background-color: var(--white);
+}
+
+.services p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.price-note {
+    text-align: center;
+    margin-bottom: 20px;
+    font-style: italic;
+    color: var(--text-color);
+}
+
+/* Таблицы */
+.prices {
+    background-color: var(--light-gray);
+}
+
+.prices table {
+    margin-bottom: 40px;
+}
+
+.prices table:last-child {
+    margin-bottom: 0;
+}
+
+.prices th {
+    background: var(--earth-gradient);
+    color: var(--white);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 15px;
+}
+
+.prices td {
+    padding: 12px 15px;
+    text-align: center;
+}
+
+.prices tr:nth-child(even) {
+    background-color: rgba(210, 180, 140, 0.1);
+}
+
+.prices tr:hover {
+    background-color: rgba(205, 133, 63, 0.1);
+}
+
+/* Контактная форма */
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto 40px;
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.contact-details {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.contact-details p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.contact-details p:first-child {
+    font-weight: 600;
+    color: var(--secondary-color);
+    font-size: 20px;
+}
+
+/* Адаптивность для таблиц */
+@media (max-width: 768px) {
+    .prices table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    .prices th, .prices td {
+        min-width: 120px;
+    }
+}
+
+/* Галерея бурения */
+.drilling-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 40px 0;
+    justify-content: center;
+}
+
+.drilling-image {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    opacity: 0;
+    animation: scaleIn 0.8s ease-out forwards;
+}
+
+.drilling-image:nth-child(1) { animation-delay: 0.2s; }
+.drilling-image:nth-child(2) { animation-delay: 0.4s; }
+.drilling-image:nth-child(3) { animation-delay: 0.6s; }
+
+.drilling-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.drilling-image:hover {
+    transform: translateY(-10px) scale(1.02);
+    transition: all 0.3s ease;
+}
+
+/* Галерея сверления */
+.sver-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 40px 0;
+    justify-content: center;
+}
+
+.sver-image {
+    flex: 1;
+    min-width: 300px;
+    max-width: 800px;
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    position: relative;
+    opacity: 0;
+    animation: scaleIn 0.8s ease-out forwards;
+}
+
+.sver-image:nth-child(1) { animation-delay: 0.2s; }
+.sver-image:nth-child(2) { animation-delay: 0.4s; }
+.sver-image:nth-child(3) { animation-delay: 0.6s; }
+
+.sver-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.sver-image:hover {
+    transform: translateY(-10px) scale(1.02);
+    transition: all 0.3s ease;
+}
+
+.sver-image:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.3));
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.sver-image:hover:after {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .drilling-gallery,
+    .sver-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .drilling-image,
+    .sver-image {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* Кнопка звонка */
+.phone-link {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: var(--transition);
+}
+
+.phone-link:hover {
+    color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+.phone-link i {
+    font-size: 24px;
+}
+
+/* Контактная секция */
+.contacts {
+    text-align: center;
+    padding: 60px 0;
+    position: relative;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('images/1.JPG');
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+}
+
+.contact-details {
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.9);
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.contact-details .phone-link {
+    font-size: 24px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.contact-details p {
+    margin: 10px 0;
+    color: var(--text-color);
+}
+
+/* Удаляем ненужные стили */
+.contact-form,
+.price-note,
+table,
+th,
+td {
+    display: none;
+}
+
+/* Улучшенные стили для текста */
+h1, h2, h3 {
+    color: var(--primary-color);
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.service-description {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    margin: 40px 0;
+}
+
+.service-description p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+/* Список материалов */
+.materials-list {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.materials-list li {
+    background-color: var(--white);
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: var(--transition);
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.materials-list li:nth-child(1) { animation-delay: 0.1s; }
+.materials-list li:nth-child(2) { animation-delay: 0.2s; }
+.materials-list li:nth-child(3) { animation-delay: 0.3s; }
+.materials-list li:nth-child(4) { animation-delay: 0.4s; }
+
+.materials-list li:before {
+    content: '✓';
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.materials-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Добавляем эффект параллакса для секций */
+.services:nth-child(odd)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url('images/2.JPG');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+.footer-call-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--accent-color);
+    color: var(--white);
+    text-decoration: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.footer-call-button:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.footer-call-button i {
+    font-size: 20px;
+}
+
+.contact-call-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--accent-color);
+    color: var(--white);
+    text-decoration: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    animation: scaleIn 0.8s ease-out;
+}
+
+.contact-call-button:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.contact-call-button i {
+    font-size: 20px;
+}
+
+html {
+    scroll-behavior: smooth;
+} 

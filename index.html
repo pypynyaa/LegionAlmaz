@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Алмазное бурение в Омске | СПЕЦАЛМАЗ</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        // Сброс позиции прокрутки при загрузке страницы
+        window.onload = function() {
+            if (window.location.hash) {
+                setTimeout(function() {
+                    window.scrollTo(0, 0);
+                }, 1);
+            }
+        };
+
+        // Анимация при скролле
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.services');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.2
+            });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>СПЕЦАЛМАЗ</h1>
+                <p>г. Омск</p>
+            </div>
+            <div class="contact-info">
+                <a href="tel:+79319542699" class="phone-link">
+                    <i class="fas fa-phone"></i>
+                    8 (931) 954-26-99
+                </a>
+                <p>Режим работы с 08:00 - 20:00</p>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#drilling">Алмазное бурение</a></li>
+                <li><a href="#boring">Алмазное сверление</a></li>
+                <li><a href="#cutting">Алмазная резка</a></li>
+                <li><a href="#contacts">Наши контакты</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Алмазное бурение в Омске</h2>
+            <p>Профессиональные услуги по алмазному бурению и резке</p>
+            <a href="tel:+79319542699" class="cta-button">
+                <i class="fas fa-phone"></i>
+                Позвонить нам
+            </a>
+        </div>
+    </section>
+
+    <section id="drilling" class="services">
+        <div class="container">
+            <h2>Алмазное бурение</h2>
+            <p>Алмазное бурение выполняется при помощи специальных алмазных инструментов. По итогу получаются идеальные ровные отверстия необходимых параметров. Алмазное бурение может применяться к самым разным стройматериалам:</p>
+            
+            <ul class="materials-list">
+                <li>Все виды бетона</li>
+                <li>Природный и искусственный камень</li>
+                <li>Кирпич</li>
+                <li>Керамика</li>
+            </ul>
+
+            <div class="drilling-gallery">
+                <div class="drilling-image">
+                    <img src="images/byr.jpg" alt="Алмазное бурение">
+                </div>
+                <div class="drilling-image">
+                    <img src="images/byr2.jpg" alt="Алмазное бурение">
+                </div>
+                <div class="drilling-image">
+                    <img src="images/byr3.jpg" alt="Алмазное бурение">
+                </div>
+            </div>
+
+            <div class="service-description">
+                <p>Железо можно пробурить при помощи обычного стального сверла, а бетон возьмет перфоратор. Что касается одновременно железа и бетона, то здесь потребуется инструмент посерьезнее. Редкий материал сможет просверлить такой прочный и крепкий материал. Именно здесь на помощь и приходит алмазное бурение. Современная технология и огромная твердость алмаза позволяют сделать именно такое отверстие, которое было запланировано.</p>
+            </div>
+
+            <div class="benefits">
+                <div class="benefit">
+                    <i class="fas fa-check-circle"></i>
+                    <p>Круглые и ровные отверстия без дополнительной обработки</p>
+                </div>
+                <div class="benefit">
+                    <i class="fas fa-volume-mute"></i>
+                    <p>Бесшумная работа</p>
+                </div>
+                <div class="benefit">
+                    <i class="fas fa-broom"></i>
+                    <p>Минимальное количество пыли</p>
+                </div>
+                <div class="benefit">
+                    <i class="fas fa-tools"></i>
+                    <p>Работа в труднодоступных местах</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="boring" class="services">
+        <div class="container">
+            <h2>Алмазное сверление</h2>
+            <p>Далеко не каждая технология способна просверлить железобетон, ведь это очень крепкая и прочная конструкция. Алмазное сверление в Омске способно просверлить железобетон любой степени армированности. Сегодня все чаще используют данный метод, когда нужно сделать идеальное отверстие в любом стройматериале.</p>
+            
+            <div class="sver-gallery">
+                <div class="sver-image">
+                    <img src="images/sver.jpg" alt="Алмазное сверление">
+                </div>
+            </div>
+
+            <div class="service-description">
+                <p>Для сверления используются станки с жидким охлаждением инструмента. Перед тем, как приступить к работе, инструмент крепится на рабочей поверхности специальными анкерами. Таким образом, стены или пол получат минимальные повреждения. Появление трещин или сколов просто исключено. В процессе применяются не ударно-поступательные движения, а только вращательные.</p>
+            </div>
+
+            <div class="benefits">
+                <div class="benefit">
+                    <i class="fas fa-check-circle"></i>
+                    <p>Идеальные круглые отверстия</p>
+                </div>
+                <div class="benefit">
+                    <i class="fas fa-volume-mute"></i>
+                    <p>Бесшумная работа</p>
+                </div>
+                <div class="benefit">
+                    <i class="fas fa-broom"></i>
+                    <p>Минимальное количество пыли</p>
+                </div>
+                <div class="benefit">
+                    <i class="fas fa-tools"></i>
+                    <p>Работа в труднодоступных местах</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cutting" class="services">
+        <div class="container">
+            <h2>Алмазная резка</h2>
+            <p>Алмазная резка в Омске позволяет добиться идеально ровных срезов. Данная методика имеет скорость работы, которая существенно превышает все известные стандартные методы. Молот, перфоратор или отбойный молоток не смогут угнаться за быстротой и эффективностью алмазной резки.</p>
+            
+            <div class="drilling-gallery">
+                <div class="drilling-image">
+                    <img src="images/rezka.jpg" alt="Алмазная резка">
+                </div>
+                <div class="drilling-image">
+                    <img src="images/rezka2.jpg" alt="Алмазная резка">
+                </div>
+            </div>
+
+            <div class="service-description">
+                <p>Алмазная резка почти не оставляет загрязнений. Пыль, которая останется после резки, можно быстро и легко убрать при помощи пылесоса. Куски бетона после работы можно свободно перенести в необходимое помещение, без особого труда.</p>
+            </div>
+
+            <div class="benefits">
+                <div class="benefit">
+                    <i class="fas fa-ban"></i>
+                    <p>Отсутствие вибрации</p>
+                </div>
+                <div class="benefit">
+                    <i class="fas fa-volume-mute"></i>
+                    <p>Минимальный шум</p>
+                </div>
+                <div class="benefit">
+                    <i class="fas fa-cut"></i>
+                    <p>Идеально ровные срезы</p>
+                </div>
+                <div class="benefit">
+                    <i class="fas fa-clock"></i>
+                    <p>Быстрое выполнение работ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts" class="contacts">
+        <div class="container">
+            <h2>Контакты</h2>
+            <div class="contact-details">
+                <a href="tel:+79319542699" class="contact-call-button">
+                    <i class="fas fa-phone"></i>
+                    Позвонить
+                </a>
+                <p>Режим работы: с 08:00 до 20:00</p>
+                <p>Мы качественно и в срок выполним все необходимые работы</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Алмазное бурение г. Омск</p>
+        </div>
+    </footer>
+</body>
+</html> 
