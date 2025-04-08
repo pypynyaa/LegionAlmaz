@@ -23,7 +23,7 @@ body {
     font-family: 'Roboto', Arial, sans-serif;
     line-height: 1.8;
     color: var(--text-color);
-    background: linear-gradient(rgba(210, 180, 140, 0.1), rgba(210, 180, 140, 0.1)), url('images/1.JPG');
+    background: linear-gradient(rgba(210, 180, 140, 0.3), rgba(210, 180, 140, 0.3)), url('./images/1.JPG');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -115,7 +115,7 @@ nav ul li a:hover {
     padding: 100px 0;
     text-align: center;
     color: var(--white);
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/1.JPG');
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./images/1.JPG');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -170,20 +170,20 @@ nav ul li a:hover {
 
 /* Секции */
 section {
-    scroll-margin-top: 120px; /* Учитываем высоту фиксированной шапки */
+    scroll-margin-top: 120px;
     padding: 80px 0;
     position: relative;
 }
 
 section:nth-child(even) {
-    background: linear-gradient(rgba(210, 180, 140, 0.2), rgba(210, 180, 140, 0.2)), url('images/2.JPG');
+    background: linear-gradient(rgba(210, 180, 140, 0.3), rgba(210, 180, 140, 0.3)), url('./images/2.JPG');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
 }
 
 section:nth-child(odd) {
-    background: linear-gradient(rgba(210, 180, 140, 0.2), rgba(210, 180, 140, 0.2)), url('images/3.JPG');
+    background: linear-gradient(rgba(210, 180, 140, 0.3), rgba(210, 180, 140, 0.3)), url('./images/3.JPG');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -318,7 +318,7 @@ tr:hover {
 /* Футер */
 footer {
     padding: 40px 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('images/3.JPG');
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('./images/3.JPG');
     background-size: cover;
     background-position: center;
     color: var(--white);
@@ -453,7 +453,7 @@ footer p {
 }
 
 .services:nth-child(even) {
-    background-color: var(--white);
+    background: none;
 }
 
 .services p {
@@ -676,9 +676,9 @@ footer p {
     text-align: center;
     padding: 60px 0;
     position: relative;
-    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('images/1.JPG');
+    background: linear-gradient(rgba(210, 180, 140, 0.3), rgba(210, 180, 140, 0.3)), url('./images/2.JPG');
     background-size: cover;
-    background-position: bottom;
+    background-position: center;
     background-attachment: fixed;
 }
 
@@ -792,19 +792,13 @@ p {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Добавляем эффект параллакса для секций */
+/* Удаляем конфликтующие стили */
 .services:nth-child(odd)::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url('images/2.JPG');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    z-index: -1;
+    display: none;
+}
+
+.services:nth-child(even) {
+    background: none;
 }
 
 .footer-call-button {
