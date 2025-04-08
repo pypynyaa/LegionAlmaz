@@ -954,9 +954,10 @@ tr:hover {
 }
 
 .services p {
-    margin-bottom: 20px;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.8;
+    color: var(--text-color);
+    margin-bottom: 20px;
 }
 
 .price-note {
@@ -1428,4 +1429,13 @@ html {
     overflow: hidden;
     border-radius: 8px;
     box-shadow: var(--shadow);
+}
+
+#drilling p:first-of-type,
+#boring p:first-of-type,
+#cutting p:first-of-type {
+    font-size: 20px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    color: var(--text-color);
 } 
