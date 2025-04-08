@@ -841,11 +841,11 @@ html {
 /* Галерея портфолио */
 .portfolio-gallery {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     margin: 40px auto;
     padding: 0 20px;
-    max-width: 1200px;
+    max-width: 1400px;
 }
 
 .portfolio-image {
@@ -854,11 +854,12 @@ html {
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: var(--transition);
+    aspect-ratio: 9/16;
 }
 
 .portfolio-image img {
     width: 100%;
-    height: 300px;
+    height: 100%;
     object-fit: cover;
     display: block;
     transition: var(--transition);
@@ -872,13 +873,18 @@ html {
     transform: scale(1.05);
 }
 
+@media (max-width: 1200px) {
+    .portfolio-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 1000px;
+    }
+}
+
 @media (max-width: 768px) {
     .portfolio-gallery {
         gap: 15px;
         padding: 0 15px;
-    }
-    .portfolio-image img {
-        height: 250px;
+        max-width: 700px;
     }
 }
 
@@ -886,8 +892,6 @@ html {
     .portfolio-gallery {
         grid-template-columns: 1fr;
         padding: 0 10px;
-    }
-    .portfolio-image img {
-        height: 300px;
+        max-width: 400px;
     }
 } 
