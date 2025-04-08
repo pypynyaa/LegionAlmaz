@@ -1438,4 +1438,115 @@ html {
     line-height: 1.8;
     margin-bottom: 25px;
     color: var(--text-color);
+}
+
+/* Медиа запросы для мобильных устройств */
+@media (max-width: 768px) {
+    /* Шапка */
+    header .container {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Навигация */
+    .quick-nav {
+        padding: 10px 0;
+    }
+
+    .quick-nav .container {
+        padding: 0 10px;
+        gap: 10px;
+    }
+
+    .quick-nav-button {
+        width: calc(50% - 10px);
+        padding: 10px;
+        font-size: 12px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    /* Основной контент */
+    .hero h2 {
+        font-size: 1.8em;
+        margin-top: 20px;
+    }
+
+    .hero p {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    section {
+        padding: 40px 0;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    /* Изображения */
+    .drilling-gallery,
+    .sver-gallery {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .drilling-image,
+    .sver-image {
+        height: 250px;
+    }
+
+    /* Списки и преимущества */
+    .materials-list {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .benefits {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .benefit {
+        padding: 15px;
+    }
+
+    /* Текст */
+    #drilling p:first-of-type,
+    #boring p:first-of-type,
+    #cutting p:first-of-type {
+        font-size: 18px;
+    }
+
+    .services p {
+        font-size: 16px;
+    }
+}
+
+/* Медиа запросы для очень маленьких экранов */
+@media (max-width: 480px) {
+    .quick-nav-button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .hero h2 {
+        font-size: 1.5em;
+    }
+
+    .contact-info a,
+    .contact-info p {
+        font-size: 14px;
+    }
 } 
