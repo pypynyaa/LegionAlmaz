@@ -842,9 +842,10 @@ html {
 .portfolio-gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    margin: 40px 0;
+    gap: 40px;
+    margin: 40px auto;
     padding: 0 20px;
+    max-width: 900px;
 }
 
 .portfolio-image {
@@ -853,9 +854,10 @@ html {
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: var(--transition);
-    aspect-ratio: 3/4;
+    aspect-ratio: 2/3;
     opacity: 0;
     animation: scaleIn 0.8s ease-out forwards;
+    height: 600px;
 }
 
 .portfolio-image img {
@@ -877,16 +879,21 @@ html {
 
 @media (max-width: 1200px) {
     .portfolio-gallery {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 25px;
+        max-width: 800px;
+    }
+    .portfolio-image {
+        height: 500px;
     }
 }
 
 @media (max-width: 768px) {
     .portfolio-gallery {
-        grid-template-columns: repeat(2, 1fr);
         gap: 20px;
         padding: 0 15px;
+        max-width: 600px;
+    }
+    .portfolio-image {
+        height: 400px;
     }
 }
 
@@ -894,5 +901,9 @@ html {
     .portfolio-gallery {
         grid-template-columns: 1fr;
         padding: 0 10px;
+        max-width: 400px;
+    }
+    .portfolio-image {
+        height: 500px;
     }
 } 
