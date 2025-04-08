@@ -225,7 +225,7 @@ section:nth-child(odd) {
         flex-direction: column;
         text-align: center;
         padding: 20px;
-        min-height: 250px;
+        min-height: 280px;
         justify-content: center;
         gap: 15px;
     }
@@ -324,7 +324,7 @@ section:nth-child(odd) {
 @media (max-width: 480px) {
     header .container {
         padding: 15px;
-        min-height: 220px;
+        min-height: 260px;
     }
 
     .logo h1 {
