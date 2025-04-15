@@ -225,7 +225,7 @@ section:nth-child(odd) {
         flex-direction: column;
         text-align: center;
         padding: 20px;
-        min-height: 280px;
+        min-height: 250px;
         justify-content: center;
         gap: 15px;
     }
@@ -273,7 +273,7 @@ section:nth-child(odd) {
 
     .contact-info p {
         font-size: 16px;
-        color: var(--white);
+        color: var(--secondary-color);
         margin: 0;
     }
 
@@ -324,7 +324,7 @@ section:nth-child(odd) {
 @media (max-width: 480px) {
     header .container {
         padding: 15px;
-        min-height: 260px;
+        min-height: 220px;
     }
 
     .logo h1 {
@@ -395,18 +395,27 @@ section:nth-child(odd) {
 
 .portfolio-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    padding: 40px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .portfolio-image {
     position: relative;
-    border-radius: 20px;
+    border-radius: 12px;
     overflow: hidden;
+    aspect-ratio: 9/16;
     box-shadow: var(--shadow);
-    aspect-ratio: 3/4;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
 }
+
+.portfolio-image:nth-child(3n+1) { animation-delay: 0.1s; }
+.portfolio-image:nth-child(3n+2) { animation-delay: 0.2s; }
+.portfolio-image:nth-child(3n+3) { animation-delay: 0.3s; }
 
 .portfolio-image img {
     width: 100%;
@@ -416,6 +425,10 @@ section:nth-child(odd) {
     border-radius: 8px;
 }
 
+.portfolio-image:hover img {
+    transform: scale(1.05);
+}
+
 .portfolio-image::after {
     content: '';
     position: absolute;
@@ -423,7 +436,7 @@ section:nth-child(odd) {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+    background: linear-gradient(to top, rgba(0,0,0,0.4), transparent);
     opacity: 0;
     transition: var(--transition);
 }
@@ -432,38 +445,42 @@ section:nth-child(odd) {
     opacity: 1;
 }
 
-.portfolio-image:hover img {
-    transform: scale(1.1);
-}
-
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
     .portfolio-gallery {
         grid-template-columns: repeat(2, 1fr);
-        max-width: 900px;
-        margin: 0 auto;
     }
 }
 
 @media (max-width: 768px) {
+    body {
+        padding-top: 140px;
+    }
+    
+    header {
+        padding: 10px 0;
+    }
+    
+    .quick-nav {
+        top: 100px;
+    }
+    
+    .quick-nav-button {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+    
+    .hero {
+        padding-top: 40px;
+    }
+    
     .portfolio-gallery {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
+        grid-template-columns: 1fr;
         padding: 15px;
-        max-width: 100%;
-        margin: 0 auto;
     }
     
     .portfolio-image {
-        width: 100%;
-        aspect-ratio: 3/4;
-    }
-}
-
-@media (max-width: 480px) {
-    .portfolio-gallery {
-        grid-template-columns: repeat(2, 1fr);
-        padding: 10px;
-        gap: 10px;
+        max-width: 400px;
+        margin: 0 auto;
     }
 }
 
@@ -1133,8 +1150,7 @@ tr:hover {
 
 .drilling-image {
     width: 100%;
-    position: relative;
-    padding-top: 75%; /* Соотношение 4:3 */
+    aspect-ratio: 4/3;
     background-color: var(--white);
     border-radius: 10px;
     overflow: hidden;
@@ -1142,9 +1158,6 @@ tr:hover {
 }
 
 .drilling-image img {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1160,8 +1173,7 @@ tr:hover {
 
 .sver-image {
     width: 100%;
-    position: relative;
-    padding-top: 75%; /* Соотношение 4:3 */
+    aspect-ratio: 4/3;
     background-color: var(--white);
     border-radius: 10px;
     overflow: hidden;
@@ -1169,9 +1181,6 @@ tr:hover {
 }
 
 .sver-image img {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1188,14 +1197,11 @@ tr:hover {
     .drilling-image,
     .sver-image {
         width: 100%;
-        padding-top: 75%; /* Сохраняем соотношение 4:3 */
+        aspect-ratio: 4/3;
     }
 
     .drilling-image img,
     .sver-image img {
-        position: absolute;
-        top: 0;
-        left: 0;
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -1431,30 +1437,31 @@ html {
     .portfolio-gallery {
         grid-template-columns: repeat(2, 1fr);
         max-width: 900px;
-        margin: 0 auto;
+    }
+    .portfolio-image {
+        height: 450px;
     }
 }
 
 @media (max-width: 768px) {
     .portfolio-gallery {
-        grid-template-columns: repeat(2, 1fr);
         gap: 15px;
-        padding: 15px;
-        max-width: 100%;
-        margin: 0 auto;
+        padding: 0 15px;
+        max-width: 600px;
     }
-    
     .portfolio-image {
-        width: 100%;
-        aspect-ratio: 3/4;
+        height: 400px;
     }
 }
 
 @media (max-width: 480px) {
     .portfolio-gallery {
-        grid-template-columns: repeat(2, 1fr);
-        padding: 10px;
-        gap: 10px;
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+        max-width: 400px;
+    }
+    .portfolio-image {
+        height: 500px;
     }
 }
 
