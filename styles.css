@@ -217,8 +217,8 @@ section:nth-child(odd) {
 @media (max-width: 768px) {
     header {
         background: var(--primary-color);
-        padding: 0;
         width: 100%;
+        padding: 0;
     }
 
     header .container {
@@ -226,7 +226,7 @@ section:nth-child(odd) {
         flex-direction: column;
         align-items: center;
         width: 100%;
-        padding: 30px 20px;
+        padding: 20px;
         background: var(--primary-color);
         min-height: auto;
         margin: 0;
@@ -235,20 +235,23 @@ section:nth-child(odd) {
     .logo {
         width: 100%;
         text-align: center;
-        margin-bottom: 25px;
+        padding: 20px 0;
+        border-bottom: 1px solid var(--secondary-color);
     }
 
     .logo h1 {
-        font-size: 42px;
+        font-size: 36px;
         color: var(--white);
-        margin: 0 0 10px 0;
+        margin: 0;
         line-height: 1.2;
+        text-transform: uppercase;
+        letter-spacing: 1px;
     }
 
     .logo p {
-        font-size: 24px;
+        font-size: 20px;
         color: var(--secondary-color);
-        margin: 0;
+        margin: 10px 0 0 0;
     }
 
     .contact-info {
@@ -256,30 +259,54 @@ section:nth-child(odd) {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 20px 0 10px 0;
         gap: 15px;
-        margin-top: 25px;
     }
 
     .contact-info .phone-link {
-        font-size: 32px;
+        font-size: 26px;
         color: var(--white);
         text-decoration: none;
         font-weight: 700;
         margin: 0;
         line-height: 1.2;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .contact-info .phone-link::before {
+        content: "☎";
+        font-size: 22px;
     }
 
     .contact-info .email-link {
-        font-size: 20px;
+        font-size: 18px;
         color: var(--secondary-color);
         text-decoration: none;
         margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .contact-info .email-link::before {
+        content: "✉";
+        font-size: 16px;
     }
 
     .contact-info p {
-        font-size: 20px;
+        font-size: 18px;
         color: var(--secondary-color);
         margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .contact-info p::before {
+        content: "🕒";
+        font-size: 16px;
     }
 
     /* Навигация */
@@ -351,35 +378,38 @@ section:nth-child(odd) {
     }
 }
 
-/* Дополнительные стили для очень маленьких экранов */
 @media (max-width: 480px) {
     header .container {
-        padding: 25px 15px;
+        padding: 15px;
+    }
+
+    .logo {
+        padding: 15px 0;
     }
 
     .logo h1 {
-        font-size: 36px;
+        font-size: 32px;
     }
 
     .logo p {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .contact-info {
+        padding: 15px 0 5px 0;
         gap: 12px;
-        margin-top: 20px;
     }
 
     .contact-info .phone-link {
-        font-size: 28px;
+        font-size: 24px;
     }
 
     .contact-info .email-link {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .contact-info p {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .quick-nav-button {
