@@ -257,12 +257,13 @@ section:nth-child(odd) {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 8px;
+        gap: 15px;
         padding: 0 15px;
+        margin-top: 20px;
     }
 
     .contact-info .phone-link {
-        font-size: 24px;
+        font-size: 32px;
         color: var(--white);
         margin: 0;
         display: block;
@@ -270,14 +271,14 @@ section:nth-child(odd) {
     }
 
     .contact-info .email-link {
-        font-size: 16px;
+        font-size: 20px;
         color: var(--secondary-color);
         margin: 0;
         display: block;
     }
 
     .contact-info p {
-        font-size: 16px;
+        font-size: 20px;
         color: var(--secondary-color);
         margin: 0;
     }
@@ -366,16 +367,21 @@ section:nth-child(odd) {
         font-size: 20px;
     }
 
+    .contact-info {
+        gap: 12px;
+        margin-top: 15px;
+    }
+
     .contact-info .phone-link {
-        font-size: 22px;
+        font-size: 28px;
     }
 
     .contact-info .email-link {
-        font-size: 14px;
+        font-size: 18px;
     }
 
     .contact-info p {
-        font-size: 14px;
+        font-size: 18px;
     }
 
     .quick-nav-button {
