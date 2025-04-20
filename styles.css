@@ -222,6 +222,7 @@ section:nth-child(odd) {
         min-height: 400px;
         display: flex;
         align-items: center;
+        margin-top: -200px;
     }
 
     header .container {
@@ -241,6 +242,7 @@ section:nth-child(odd) {
         padding: 30px 0;
         border-bottom: 2px solid var(--secondary-color);
         margin-bottom: 30px;
+        margin-top: 200px;
     }
 
     .logo h1 {
@@ -376,15 +378,11 @@ section:nth-child(odd) {
 @media (max-width: 480px) {
     header {
         min-height: 350px;
-    }
-
-    header .container {
-        padding: 30px 15px;
+        margin-top: -180px;
     }
 
     .logo {
-        padding: 20px 0;
-        margin-bottom: 20px;
+        margin-top: 180px;
     }
 
     .logo h1 {
