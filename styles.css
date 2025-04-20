@@ -215,12 +215,9 @@ section:nth-child(odd) {
 
 /* Медиа запросы */
 @media (max-width: 768px) {
-    body {
-        padding-top: 0;
-    }
-
     header {
-        padding: 15px 0;
+        padding: 20px 0;
+        background: var(--primary-color);
         position: relative !important;
     }
 
@@ -229,22 +226,24 @@ section:nth-child(odd) {
         align-items: center;
         text-align: center;
         min-height: auto;
-        padding: 15px;
-        gap: 10px;
+        padding: 0;
+        gap: 15px;
     }
 
     .logo {
         text-align: center;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
     }
 
     .logo h1 {
-        font-size: 32px;
+        font-size: 36px;
         margin-bottom: 5px;
+        color: var(--white);
     }
 
     .logo p {
         font-size: 18px;
+        color: var(--secondary-color);
         margin: 5px 0;
     }
 
@@ -254,39 +253,43 @@ section:nth-child(odd) {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 5px;
+        gap: 8px;
+        padding: 0 15px;
     }
 
     .contact-info .phone-link {
         font-size: 24px;
         color: var(--white);
-        margin: 5px 0;
+        margin: 0;
         display: block;
+        font-weight: 700;
     }
 
     .contact-info .email-link {
         font-size: 16px;
         color: var(--secondary-color);
-        margin: 5px 0;
+        margin: 0;
         display: block;
     }
 
     .contact-info p {
-        font-size: 14px;
+        font-size: 16px;
         color: var(--secondary-color);
-        margin: 5px 0;
+        margin: 0;
     }
 
+    /* Навигация */
     .quick-nav {
-        padding: 10px 0;
-        margin-top: 10px;
+        padding: 15px 0;
+        margin: 0;
+        background: var(--white);
         position: relative;
     }
 
     .quick-nav .container {
         flex-direction: column;
         gap: 10px;
-        padding: 10px;
+        padding: 0 15px;
     }
 
     .quick-nav-button {
@@ -296,6 +299,7 @@ section:nth-child(odd) {
         display: flex;
         justify-content: center;
         align-items: center;
+        border-radius: 10px;
     }
 
     /* Галерея */
@@ -345,12 +349,12 @@ section:nth-child(odd) {
 
 /* Дополнительные стили для очень маленьких экранов */
 @media (max-width: 480px) {
-    header .container {
-        padding: 10px;
+    header {
+        padding: 15px 0;
     }
 
     .logo h1 {
-        font-size: 28px;
+        font-size: 32px;
     }
 
     .logo p {
@@ -366,7 +370,7 @@ section:nth-child(odd) {
     }
 
     .contact-info p {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .quick-nav-button {
