@@ -216,10 +216,10 @@ section:nth-child(odd) {
 /* Медиа запросы */
 @media (max-width: 768px) {
     header {
-        padding: 40px 0;
+        padding: 60px 0;
         background: var(--primary-color);
         position: relative !important;
-        min-height: 200px;
+        min-height: 300px;
         display: flex;
         align-items: center;
     }
@@ -230,25 +230,25 @@ section:nth-child(odd) {
         text-align: center;
         min-height: auto;
         padding: 0;
-        gap: 20px;
+        gap: 30px;
         width: 100%;
     }
 
     .logo {
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
 
     .logo h1 {
-        font-size: 42px;
-        margin-bottom: 10px;
+        font-size: 48px;
+        margin-bottom: 15px;
         color: var(--white);
     }
 
     .logo p {
-        font-size: 20px;
+        font-size: 24px;
         color: var(--secondary-color);
-        margin: 10px 0;
+        margin: 15px 0;
     }
 
     .contact-info {
@@ -354,16 +354,16 @@ section:nth-child(odd) {
 /* Дополнительные стили для очень маленьких экранов */
 @media (max-width: 480px) {
     header {
-        padding: 30px 0;
-        min-height: 180px;
+        padding: 40px 0;
+        min-height: 250px;
     }
 
     .logo h1 {
-        font-size: 36px;
+        font-size: 42px;
     }
 
     .logo p {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .contact-info .phone-link {
