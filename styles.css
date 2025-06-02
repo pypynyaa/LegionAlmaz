@@ -835,12 +835,14 @@ footer p {
     }
     
     .quick-nav .container {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 10px;
     }
     
     .quick-nav-button {
-        width: 100%;
+        width: auto;
         justify-content: center;
     }
     
